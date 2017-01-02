@@ -8,7 +8,7 @@ import net.sf.cglib.proxy.MethodProxy;
 
 /**
  * 借助 CGLib 使方法区出现内存溢出异常
- * VM Args:-XX:PermSize=10M -XX:MaxPermSize=10M
+ * VM Args:-XX:PermSize=10M -XX:MaxPermSize=10M 
  * @author rocki
  *
  */
