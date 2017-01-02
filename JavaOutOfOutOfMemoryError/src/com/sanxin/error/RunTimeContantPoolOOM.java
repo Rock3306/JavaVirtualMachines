@@ -47,6 +47,7 @@ public class RunTimeContantPoolOOM {
 		/*
 		 jdk 1.7(以及部分其他虚拟机，例如JRockit)的 intern() 实现不会再复制实例，只是再字符串中记录
 		 首次出现的实例引用，因此 intern() 返回的引用和由 StringBuilder 创建的那个字符串实例是同一个
+		 结果为 true 和 false
 		 */
 	}
 
