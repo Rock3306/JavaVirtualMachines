@@ -38,6 +38,16 @@ public class RunTimeContantPoolOOM {
 		
 		String str2 = new StringBuilder("ja").append("va").toString();
 		System.out.println(str2.intern() == str2);
+		
+		/*jdk 1.6中的结果为两个false，
+		 intern()方法会把首次遇到的字符串实例复制到永久代中,返回的也是永久代中的这个字符串实例的引用，而
+		 由 StringBuilder 创建的字符串实例在堆上,所以必然不是同一个引用
+		 */
+		
+		/*
+		 jdk 1.7(以及部分其他虚拟机，例如JRockit)的 intern() 实现不会再复制实例，只是再字符串中记录
+		 首次出现的实例引用，因此 intern() 返回的引用和由 StringBuilder 创建的那个字符串实例是同一个
+		 */
 	}
 
 }
